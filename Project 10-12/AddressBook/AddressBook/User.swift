@@ -8,18 +8,19 @@
 import SwiftUI
 
 // MARK: - User
-struct User: Codable {
-    var id: String?
+struct User: Codable, Identifiable {
+    var id: String
     var isActive: Bool?
     var name: String?
     var age: Int?
     var company, email, address, about: String?
-    var registered: Date?
+    var registered: String?
     var tags: [String]?
     var friends: [Friend]?
 }
 
 // MARK: - Friend
-struct Friend: Codable {
-    var id, name: String?
+struct Friend: Codable, Identifiable {
+    var id, name: String
 }
+
